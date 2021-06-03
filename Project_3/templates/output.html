@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+
+{% block body %} 
+<h1 style="text-align: center;">{{title_text}}</h1>
+        <form action="{{ url_for('submit') }}" method="POST" style="text-align: center;">
+            <textarea name="output_textarea" style="margin: 0px; width: 40%; height: 300px;">
+{{output_text}}
+            </textarea>
+        </form>
+
+{% endblock %}

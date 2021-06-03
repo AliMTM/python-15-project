@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+
+{% block body %} 
+<h1 style="text-align: center;">Welcome to Text Encryptor/Decryptor project</h1>
+        <form action="{{ url_for('submit') }}" method="POST" style="text-align: center;">
+            <textarea name="input_textarea" style="width: 40%; height: 300px;">
+{{input_text}}
+            </textarea>
+            <br>
+            Please enter the KeyWord
+            <input type="text"  name="keyword">
+            <input type="submit" name= "encrypt" value="Encrypt">
+            <input type="submit" name= "decrypt" value="Decrypt">
+        </form>
+
+        
+{% endblock %}
